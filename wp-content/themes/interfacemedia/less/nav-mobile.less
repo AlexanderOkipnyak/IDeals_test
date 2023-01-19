@@ -1,0 +1,43 @@
+.mobile_navigation{
+    display:none;
+    position:absolute;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:100;
+    background:@color3;
+    max-height:0;
+    overflow:hidden;
+    transition: 0.8s linear;
+    &.active{
+        max-height:1000px;
+        height:auto;
+    }
+    @media (max-width: @tabletResolution){
+        display:block;
+    }
+    .close_menu{
+        color:@white;
+        position:absolute;
+        right:30px;
+        top:30px;
+        font-size:10px;
+    }
+    li{
+        > a{
+            color: @white;
+            font-weight: bold;
+            padding: 13px 30px;
+            line-height: 30px;
+            border:1px solid transparent;
+            display: block;
+            transition: 0.5s linear;
+        }
+        > ul{
+            a{
+                font-weight:normal;
+                padding: 13px 50px;
+            }
+        }
+    }
+}
