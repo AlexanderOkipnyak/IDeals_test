@@ -1,5 +1,5 @@
 <?php
-
+@define( 'FILE_WRITEABLE', is_writeable( get_template_directory_uri().'/style.css'));
 /***************************
  * Register menus
  ***************************/
